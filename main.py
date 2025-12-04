@@ -170,7 +170,6 @@ ctk.set_default_color_theme("blue")
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-
         self.lang_map = {
             "自动检测": "auto",
             "自动匹配": "auto",
@@ -179,7 +178,17 @@ class App(ctk.CTk):
         }
 
         self.title("离线翻译助手（雨季）")
-        self.geometry("700x600")
+
+        self.window_width = 700  # 窗口宽度
+        self.window_height = 600  # 窗口高度
+        # 获取屏幕宽高
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+        # 计算居中坐标
+        x = int((screen_width - self.window_width) / 2)
+        y = int((screen_height - self.window_height) / 2)
+        # 设置窗口大小和位置 (宽x高+X+Y)
+        self.geometry(f"{self.window_width}x{self.window_height}+{x}+{y}")
         self.backend = TranslatorBackend()
 
         self.grid_columnconfigure(0, weight=1)

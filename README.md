@@ -1,6 +1,6 @@
 # python实现本地离线翻译软件
 
-首先安装 argostranslate
+## 首先安装 argostranslate
 
 ```shell
 pip install argostranslate
@@ -8,16 +8,19 @@ pip install pyperclip
 #UI版本
 pip install customtkinter
 ```
-设置环境变量可以指定模型下载目录，否则模型默认目录为：C:\Users\[用户名]\.local\share\argos-translate\packages
+## 启动
+```shell
+python.exe .\main.py
+```
 
+界面
 ![图片1](doc/001.png)
 
 ![图片2](doc/002.png)
 
 
-
-如果是简单demo无UI界面，源码如下
-
+### 如果是简单demo无UI界面，源码如下
+设置环境变量可以指定模型下载目录，否则模型默认目录为：C:\Users\[用户名]\.local\share\argos-translate\packages
 ```python
 import pyperclip
 import sys
