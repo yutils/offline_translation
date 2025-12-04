@@ -3,6 +3,11 @@
 ## 首先安装 argostranslate
 
 ```shell
+#创建新的虚拟环境 （或者vscode自动创建）
+python -m venv .venv
+#激活新环境
+.venv\Scripts\activate.bat
+#安装插件
 pip install argostranslate
 pip install pyperclip
 #UI版本
